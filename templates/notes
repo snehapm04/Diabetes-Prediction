@@ -1,0 +1,7 @@
+pip install django
+pip install matplotlib
+pip install seaborn
+
+deploying
+Allowed host ['.vercel.app']
+create vercel.json

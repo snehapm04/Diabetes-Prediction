@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Diabetes Prediction Page</title>
+    <style>
+        body {
+            background-color: black;
+            
+            background-size: cover;
+            background-repeat: no-repeat;
+            font-family: Arial, sans-serif;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        .main {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 30px;
+            width: 60%;
+            margin-right: 20px;
+        }
+
+        .results {
+            width: 35%;
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 15px;
+            color: #ffffff;
+        }
+
+        .results h3 {
+            font-size: 24px;
+            color: #FFA500;
+            margin-bottom: 10px;
+        }
+
+        .results p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #FFD700;
+        }
+
+        h1 {
+            color: #F6465B;
+            font-size: 30px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            font-size: 14px;
+        }
+
+        input[type="submit"] {
+            background-color: #FFA500;
+            border: none;
+            color: white;
+            font-size: 15px;
+            font-weight: bold;
+            padding: 10px 16px;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #ff7f00;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="main">
+            <h1>Diabetes Prediction</h1>
+            <form action="result" method="get">
+                <table>
+                    <tr><td><strong>Pregnancies:</strong></td><td><input type="text" name="n1"></td></tr>
+                    <tr><td><strong>Glucose:</strong></td><td><input type="text" name="n2"></td></tr>
+                    <tr><td><strong>Blood Pressure:</strong></td><td><input type="text" name="n3"></td></tr>
+                    <tr><td><strong>Skin Thickness:</strong></td><td><input type="text" name="n4"></td></tr>
+                    <tr><td><strong>Insulin:</strong></td><td><input type="text" name="n5"></td></tr>
+                    <tr><td><strong>BMI:</strong></td><td><input type="text" name="n6"></td></tr>
+                    <tr><td><strong>Diabetes Pedigree Function:</strong></td><td><input type="text" name="n7"></td></tr>
+                    <tr><td><strong>Age:</strong></td><td><input type="text" name="n8"></td></tr>
+                </table>
+                <input type="submit" value="PREDICT">
+            </form>
+        </div>
+        
+        <div class="results">
+            <h3>Prediction Outcome</h3>
+            <p>{{ result2 }}</p>
+
+            <h3>Explanation</h3>
+            <p>{{ explanation }}</p>
+        </div>
+    </div>
+</body>
+</html>
